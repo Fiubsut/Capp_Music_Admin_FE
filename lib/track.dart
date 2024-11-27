@@ -164,7 +164,7 @@ class _TrackManagementPageState extends State<TrackManagementPage> {
       appBar: AppBar(
         backgroundColor: Colors.black,
         foregroundColor: Colors.white,
-        title: const Center(child: Text('Track Management')),
+        title: const Center(child: Text('Quản lý Tracks')),
         actions: [
           IconButton(
             icon: Icon(Icons.add),

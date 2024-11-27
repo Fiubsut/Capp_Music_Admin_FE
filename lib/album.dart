@@ -162,7 +162,7 @@ class _AlbumManagementPageState extends State<AlbumManagementPage> {
       appBar: AppBar(
         backgroundColor: Colors.black,
         foregroundColor: Colors.white,
-        title: const Center(child: Text('Album Management')),
+        title: const Center(child: Text('Quản lý Albums')),
         actions: [
           IconButton(
             icon: Icon(Icons.add),

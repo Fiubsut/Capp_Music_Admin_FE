@@ -83,16 +83,16 @@ class _GenreManagementPageState extends State<GenreManagementPage> {
     bool? confirmDelete = await showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: Text('Xác nhận xóa'),
-        content: Text('Bạn có chắc chắn muốn xóa thể loại này?'),
+        title: Text('Confirm Delete'),
+        content: Text('Are you sure you want to delete this Genre?'),
         actions: [
           TextButton(
             onPressed: () => Navigator.of(context).pop(false),
-            child: Text('Hủy'),
+            child: Text('Cancel'),
           ),
           TextButton(
             onPressed: () => Navigator.of(context).pop(true),
-            child: Text('Xóa'),
+            child: Text('Delete'),
           ),
         ],
       ),
@@ -118,19 +118,19 @@ class _GenreManagementPageState extends State<GenreManagementPage> {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: Text('Tạo Genre Mới'),
+        title: Text('Create New Genre'),
         content: TextField(
           controller: _genreNameController,
-          decoration: InputDecoration(labelText: 'Tên thể loại'),
+          decoration: InputDecoration(labelText: 'Genre Name'),
         ),
         actions: <Widget>[
           TextButton(
             onPressed: () => Navigator.of(context).pop(),
-            child: Text('Hủy'),
+            child: Text('Cancel'),
           ),
           TextButton(
             onPressed: _createGenre,
-            child: Text('Tạo'),
+            child: Text('Create'),
           ),
         ],
       ),
@@ -143,21 +143,21 @@ class _GenreManagementPageState extends State<GenreManagementPage> {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: Text('Chỉnh sửa Genre'),
+        title: Text('Update Genre'),
         content: TextField(
           controller: _genreNameController,
-          decoration: InputDecoration(labelText: 'Tên thể loại'),
+          decoration: InputDecoration(labelText: 'Genre Name'),
         ),
         actions: <Widget>[
           TextButton(
             onPressed: () => Navigator.of(context).pop(),
-            child: Text('Hủy'),
+            child: Text('Cancel'),
           ),
           TextButton(
             onPressed: () {
               _updateGenre(genreId);
             },
-            child: Text('Cập nhật'),
+            child: Text('Update'),
           ),
         ],
       ),
@@ -177,7 +177,7 @@ class _GenreManagementPageState extends State<GenreManagementPage> {
           IconButton(
             icon: Icon(Icons.add),
             onPressed: showCreateGenreDialog,
-            tooltip: 'Tạo Genre Mới',
+            tooltip: 'Create New Genre',
           ),
         ],
       ),

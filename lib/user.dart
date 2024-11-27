@@ -238,7 +238,7 @@ class _UserManagementPageState extends State<UserManagementPage> {
       appBar: AppBar(
         backgroundColor: Colors.black,
         foregroundColor: Colors.white,
-        title: const Text('Quản lý User'),
+        title: const Text('Quản lý Users'),
         centerTitle: true,
       ),
       body: _isLoading

@@ -265,7 +265,7 @@ class _ArtistManagementPageState extends State<ArtistManagementPage> {
       appBar: AppBar(
         backgroundColor: Colors.black,
         foregroundColor: Colors.white,
-        title: const Text('Artist Management'),
+        title: const Text('Quản lý Artists'),
         actions: [
           IconButton(
             icon: const Icon(Icons.add),
